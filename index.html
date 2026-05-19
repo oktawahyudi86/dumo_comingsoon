@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DUMO - Jual Beli Mobil Bekas Terbaik</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#b42808",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#8c1800",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#251915",
+                        "on-error": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "primary-container": "#d43f1f",
+                        "on-primary-fixed": "#3d0600",
+                        "tertiary-fixed-dim": "#d9c1bb",
+                        "border-warm": "#E4BEB5",
+                        "secondary-fixed-dim": "#ffb4a7",
+                        "dark-bg": "#0F172A",
+                        "on-surface-variant": "#5a413b",
+                        "on-background": "#1a1c1c",
+                        "surface-dim": "#dadada",
+                        "secondary-container": "#fd6e57",
+                        "on-surface": "#1a1c1c",
+                        "background": "#f9f9f9",
+                        "on-primary-container": "#fffbff",
+                        "on-secondary-fixed-variant": "#8a1b0d",
+                        "inverse-on-surface": "#f1f1f1",
+                        "outline-variant": "#e3beb6",
+                        "whatsapp-green": "#25D366",
+                        "primary": "#b12505",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#ffdad4",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary": "#6a5853",
+                        "tertiary-fixed": "#f6ddd6",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-fixed-variant": "#54433e",
+                        "on-tertiary-container": "#fffbff",
+                        "dark-surface": "#1E293B",
+                        "accent-glow": "#F3AA98",
+                        "primary-fixed-dim": "#ffb4a4",
+                        "on-secondary-fixed": "#400200",
+                        "inverse-surface": "#2f3131",
+                        "surface-container-low": "#f3f3f3",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "surface-subtle": "#FFF7F4",
+                        "on-primary": "#ffffff",
+                        "dark-border": "#334155",
+                        "outline": "#8f7069",
+                        "tertiary-container": "#84706b",
+                        "secondary": "#ac3322",
+                        "primary-fixed": "#ffdad3",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#6c0500",
+                        "inverse-primary": "#ffb4a4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "32px",
+                        "stack-sm": "12px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "stack-lg": "48px",
+                        "container-max": "1440px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-bold": ["Inter"],
+                        "price-display": ["Plus Jakarta Sans"],
+                        "body-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "price-display": ["24px", {"lineHeight": "32px", "fontWeight": "800"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .cta-gradient {
+            /* Darker gradient to improve white text contrast */
+            background: linear-gradient(135deg, #8C1A12 0%, #B12505 50%, #E74C2B 100%);
+        }
+        .bg-glow {
+            background: radial-gradient(circle at center, rgba(231,76,43, 0.08), transparent 60%);
+        }
+        .dark .bg-glow {
+            background: radial-gradient(circle at center, rgba(231,76,43, 0.15), transparent 70%);
+        }
+        .road-toggle {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .transition-theme {
+            transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+        }
+        /* Badge and footer contrast fixes for dark mode */
+        .badge {
+            background: #FDE4DD;
+            color: #E74C2B;
+        }
+        .dark .badge {
+            background: rgba(177,37,5,0.12);
+            color: #FFB4A4;
+        }
+        .year-pill {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 8px;
+            background: rgba(159,42,26,0.12);
+            color: #B12505;
+            font-weight: 700;
+            margin-right: 6px;
+        }
+        .dark .year-pill {
+            background: rgba(255,255,255,0.06);
+            color: #FFD6CC;
+        }
+        /* Secondary button and micro-item contrast fixes */
+        .btn-secondary {
+            border: 2px solid #E4BEB5;
+            color: #1A1C1C;
+            background: transparent;
+        }
+        .dark .btn-secondary {
+            border-color: rgba(255,255,255,0.14);
+            color: #FFD6CC;
+            background: rgba(255,255,255,0.02);
+        }
+        .micro {
+            color: #666666;
+        }
+        .dark .micro {
+            color: #FFD6CC;
+        }
+        /* Contrast helpers for key text */
+        .headline-contrast { color: #1a1c1c; }
+        .body-contrast { color: #1a1c1c; }
+        .dark .headline-contrast { color: #FFFFFF; }
+        .dark .body-contrast { color: #E6EEF2; }
+        /* Improve secondary button contrast in dark mode */
+        .dark .btn-secondary {
+            border-color: rgba(255,255,255,0.2);
+            color: #FFFFFF;
+            background: rgba(255,255,255,0.02);
+        }
+        /* focus-visible outlines for accessibility */
+        .cta-gradient:focus-visible, .btn-secondary:focus-visible, a:focus-visible {
+            outline: 3px solid rgba(255,255,255,0.12);
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+<body class="bg-surface dark:bg-dark-bg transition-theme text-on-surface dark:text-on-primary-container antialiased selection:bg-primary selection:text-white">
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl z-50 flex items-center justify-between px-6 py-2 bg-surface/80 dark:bg-dark-surface/80 backdrop-blur-md rounded-full mt-4 shadow-sm border border-outline-variant/20 dark:border-dark-border/20 transition-theme">
+<div class="flex items-center gap-4">
+<!-- Road Toggle (Custom Theme Switcher) -->
+<button aria-label="Toggle Theme" class="road-toggle group relative flex h-10 w-20 items-center rounded-full bg-surface-container dark:bg-dark-border p-1 shadow-inner overflow-hidden" onclick="toggleTheme()">
+<div class="absolute left-1 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-primary shadow-md transition-all duration-500 transform translate-x-0 dark:translate-x-10" id="road-thumb">
+<span class="material-symbols-outlined text-primary dark:text-white text-[20px]" id="theme-icon">light_mode</span>
+</div>
+<div class="flex w-full justify-around text-on-surface-variant/30 dark:text-on-primary-fixed-variant/50">
+<span class="material-symbols-outlined text-[16px]">directions_car</span>
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+</div>
+</button>
+</div>
+<div class="flex items-center gap-stack-sm">
+<a class="hidden md:flex items-center text-primary dark:text-primary-fixed-dim font-bold text-body-md hover:scale-105 transition-all duration-300" href="https://wa.me/6285769656666" target="_blank" rel="noopener noreferrer">
+                Hubungi Kami
+            </a>
+<a href="https://wa.me/6285769656666" target="_blank" rel="noopener noreferrer" class="md:hidden flex items-center justify-center h-10 w-10 bg-primary/10 rounded-full text-primary">
+<span class="material-symbols-outlined">call</span>
+</a>
+</div>
+</header>
+<main class="h-screen w-full flex flex-col md:flex-row overflow-hidden relative">
+<!-- Left Content Section (45%) -->
+<section class="w-full md:w-[45%] h-full flex items-center px-margin-mobile md:px-margin-desktop z-10">
+<div class="max-w-xl mx-auto md:mx-0 flex flex-col gap-stack-md pt-20 md:pt-0 items-center text-center md:items-start md:text-left">
+<!-- Mobile Logo -->
+<img alt="DUMO Logo" class="md:hidden w-40 h-auto mb-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH3ktrxZ4H7wAEIaMHgWEQdkLsNTrIOlqrqOR15jgSON1nS7D5TZpNzRJSAdWLTm9n6hY1fMrZHyVNrfHldRa7j2QBpV_b6gVwhs21DS9eH4atq8PHVIgMhimmnF3jaXZDkp60ZzroyAs_-YsamIomshBeRBX_8Gn4Jc5I0ypgr51byM6xFjrB0s44zddyxZGwznWecybVRUj4kfAJpSn5Han7qRKO06LGGxSyRo0kTejiGod5f6QFtnAXS4Nj_G6ciz1kZjdOxOk"/>
+<!-- Badge -->
+<div class="inline-flex items-center self-center md:self-start px-3 py-1 rounded-full badge text-[12px] font-semibold shadow-sm">
+<span class="mr-2">🚀</span> Segera Hadir
+                </div>
+<!-- Headline -->
+<h1 class="text-[24px] leading-[32px] font-bold md:text-display-lg headline-contrast">
+                    Jual Beli Mobil Bekas dengan <span class="text-primary">Kualitas Terbaik</span>
+</h1>
+<!-- Description -->
+<p class="text-[14px] leading-[20px] body-contrast leading-relaxed max-w-md md:max-w-lg">
+                    Mau beli atau jual mobil gak pakai ribet di DUMO aja. Gunakan sistem <span class="font-bold">COD (Cek, OK, Deal)</span>, jadi Anda bisa cek langsung kondisi mobil sebelum deal. Jual dan beli mobil jadi lebih aman, nyaman, dan tanpa worry.
+                </p>
+<!-- CTA Row -->
+<div class="flex flex-col sm:flex-row items-center gap-3 mt-stack-sm w-full max-w-sm mx-auto md:mx-0">
+<button class="w-full sm:w-auto cta-gradient text-white h-12 px-6 rounded-lg text-[14px] font-semibold shadow-md shadow-primary/20 active:scale-95 transition-all duration-150">
+                        Dapatkan Update
+                    </button>
+<a href="https://wa.me/6285769656666" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto btn-secondary h-12 px-6 rounded-lg text-[14px] font-semibold hover:bg-[#E4BEB5]/10 active:scale-95 transition-all duration-150 inline-flex items-center justify-center">
+                        Hubungi Kami
+                    </a>
+</div>
+<!-- Micro Text -->
+<div class="flex items-center gap-4 micro text-[10px] font-bold tracking-[0.18em] mt-stack-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+                        COD
+                    </div>
+<div class="h-1 w-1 bg-[#666666] rounded-full"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">workspace_premium</span>
+                        Kualitas Terbaik
+                    </div>
+<div class="h-1 w-1 bg-[#666666] rounded-full"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">bolt</span>
+                        Gak Pakai Ribet
+                    </div>
+</div>
+</div>
+</section>
+<!-- Right Visual Section (55%) -->
+<section class="hidden md:flex w-full md:w-[55%] h-full items-center justify-center relative bg-glow transition-theme">
+<!-- Animated Background Elements -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden">
+<div class="absolute top-[20%] right-[10%] w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+<div class="absolute bottom-[20%] left-[10%] w-80 h-80 bg-accent-glow/10 rounded-full blur-3xl"></div>
+</div>
+<!-- Focal Logo -->
+<div class="relative z-10 w-full max-w-2xl px-12 group">
+<img alt="DUMO Logo" class="w-full h-auto drop-shadow-2xl transition-transform duration-700 group-hover:scale-105" data-alt="A clean and professional photograph of the DUMO brand logo displayed in a minimalist, architectural setting. The logo is large and central, positioned against a background that features soft, ambient lighting with subtle radial gradients of warm orange and cool whites. The overall aesthetic is high-end, corporate, and modern, reflecting a premium automotive startup brand identity with plenty of breathable whitespace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH3ktrxZ4H7wAEIaMHgWEQdkLsNTrIOlqrqOR15jgSON1nS7D5TZpNzRJSAdWLTm9n6hY1fMrZHyVNrfHldRa7j2QBpV_b6gVwhs21DS9eH4atq8PHVIgMhimmnF3jaXZDkp60ZzroyAs_-YsamIomshBeRBX_8Gn4Jc5I0ypgr51byM6xFjrB0s44zddyxZGwznWecybVRUj4kfAJpSn5Han7qRKO06LGGxSyRo0kTejiGod5f6QFtnAXS4Nj_G6ciz1kZjdOxOk"/>
+</div>
+</section>
+<!-- Mobile Background Accent -->
+<div class="md:hidden absolute inset-0 -z-10 bg-glow"></div>
+</main>
+<!-- Footer Shell -->
+<footer class="fixed bottom-0 w-full flex flex-col md:flex-row justify-center md:justify-between items-center gap-1 px-margin-mobile md:px-margin-desktop py-4 bg-transparent z-50">
+<div class="flex flex-col items-center md:flex-row md:items-center gap-1">
+<span class="text-primary font-black text-sm md:text-headline-md">DUMO</span>
+<div class="hidden md:block h-4 w-[1px] bg-outline-variant/30 mx-2"></div>
+<p class="text-on-surface-variant dark:text-surface-variant font-body-sm text-xs md:text-body-sm"><span class="year-pill">2026</span> DUMO. All rights reserved.</p>
+</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant font-body-sm text-body-sm hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-sm text-body-sm hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-sm text-body-sm hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Contact</a>
+</div>
+</footer>
+<script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            const thumb = document.getElementById('road-thumb');
+            
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                icon.innerText = 'light_mode';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                icon.innerText = 'dark_mode';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Initialize theme from local storage
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            const icon = document.getElementById('theme-icon');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+                icon.innerText = 'dark_mode';
+            }
+        });
+
+        // Micro-interaction for the CTA button
+        const ctaBtn = document.querySelector('.cta-gradient');
+        if (ctaBtn) {
+            ctaBtn.addEventListener('mousemove', (e) => {
+                const rect = ctaBtn.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                ctaBtn.style.background = `radial-gradient(circle at ${x}px ${y}px, #E74C2B 0%, #9F2A1A 100%)`;
+            });
+            ctaBtn.addEventListener('mouseleave', () => {
+                ctaBtn.style.background = `linear-gradient(135deg, #9F2A1A 0%, #CC3C24 50%, #E74C2B 100%)`;
+            });
+        }
+    </script>
+</body></html>
