@@ -110,7 +110,7 @@
             }
         }
     </script>
-    <style>
+<style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
@@ -185,16 +185,11 @@
             outline: 3px solid rgba(255,255,255,0.12);
             outline-offset: 3px;
         }
-        /* Footer safe-area and mobile behavior */
-        .site-footer { padding-bottom: 12px; }
-        @supports (padding: env(safe-area-inset-bottom)) {
-            .site-footer { padding-bottom: calc(env(safe-area-inset-bottom) + 12px); }
-        }
     </style>
 </head>
 <body class="bg-surface dark:bg-dark-bg transition-theme text-on-surface dark:text-on-primary-container antialiased selection:bg-primary selection:text-white">
 <!-- TopNavBar Shell -->
-<header class="relative md:fixed top-0 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl md:z-50 z-10 flex items-center justify-between px-6 py-2 bg-surface/80 dark:bg-dark-surface/80 backdrop-blur-md rounded-full mt-4 shadow-sm border border-outline-variant/20 dark:border-dark-border/20 transition-theme">
+<header class="fixed top-0 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl z-50 flex items-center justify-between px-6 py-2 bg-surface/80 dark:bg-dark-surface/80 backdrop-blur-md rounded-full mt-4 shadow-sm border border-outline-variant/20 dark:border-dark-border/20 transition-theme">
 <div class="flex items-center gap-4">
 <!-- Road Toggle (Custom Theme Switcher) -->
 <button aria-label="Toggle Theme" class="road-toggle group relative flex h-10 w-20 items-center rounded-full bg-surface-container dark:bg-dark-border p-1 shadow-inner overflow-hidden" onclick="toggleTheme()">
@@ -216,35 +211,35 @@
 </a>
 </div>
 </header>
-<main class="min-h-screen w-full flex flex-col md:flex-row overflow-auto relative pb-[110px] md:pb-0 md:pt-24">
+<main class="h-screen w-full flex flex-col md:flex-row overflow-hidden relative">
 <!-- Left Content Section (45%) -->
 <section class="w-full md:w-[45%] h-full flex items-center px-margin-mobile md:px-margin-desktop z-10">
 <div class="max-w-xl mx-auto md:mx-0 flex flex-col gap-stack-md pt-20 md:pt-0 items-center text-center md:items-start md:text-left">
 <!-- Mobile Logo -->
 <img alt="DUMO Logo" class="md:hidden w-40 h-auto mb-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH3ktrxZ4H7wAEIaMHgWEQdkLsNTrIOlqrqOR15jgSON1nS7D5TZpNzRJSAdWLTm9n6hY1fMrZHyVNrfHldRa7j2QBpV_b6gVwhs21DS9eH4atq8PHVIgMhimmnF3jaXZDkp60ZzroyAs_-YsamIomshBeRBX_8Gn4Jc5I0ypgr51byM6xFjrB0s44zddyxZGwznWecybVRUj4kfAJpSn5Han7qRKO06LGGxSyRo0kTejiGod5f6QFtnAXS4Nj_G6ciz1kZjdOxOk"/>
 <!-- Badge -->
-<div class="inline-flex items-center self-center md:self-start px-3 py-1 rounded-full badge text-[13px] font-semibold shadow-sm">
+<div class="inline-flex items-center self-center md:self-start px-3 py-1 rounded-full badge text-[12px] font-semibold shadow-sm">
 <span class="mr-2">🚀</span> Segera Hadir
                 </div>
 <!-- Headline -->
-<h1 class="text-[28px] leading-[36px] md:text-[40px] md:leading-[48px] font-bold headline-contrast">
+<h1 class="text-[24px] leading-[32px] font-bold md:text-display-lg headline-contrast">
                     Jual Beli Mobil Bekas dengan <span class="text-primary">Kualitas Terbaik</span>
 </h1>
 <!-- Description -->
-<p class="text-[16px] leading-[24px] md:text-[18px] md:leading-[28px] body-contrast leading-relaxed max-w-md md:max-w-lg">
+<p class="text-[14px] leading-[20px] body-contrast leading-relaxed max-w-md md:max-w-lg">
                     Mau beli atau jual mobil gak pakai ribet di DUMO aja. Gunakan sistem <span class="font-bold">COD (Cek, OK, Deal)</span>, jadi Anda bisa cek langsung kondisi mobil sebelum deal. Jual dan beli mobil jadi lebih aman, nyaman, dan tanpa worry.
                 </p>
 <!-- CTA Row -->
 <div class="flex flex-col sm:flex-row items-center gap-3 mt-stack-sm w-full max-w-sm mx-auto md:mx-0">
-<button class="w-full sm:w-auto cta-gradient text-white h-12 px-6 rounded-lg text-[16px] font-semibold shadow-md shadow-primary/20 active:scale-95 transition-all duration-150">
+<button class="w-full sm:w-auto cta-gradient text-white h-12 px-6 rounded-lg text-[14px] font-semibold shadow-md shadow-primary/20 active:scale-95 transition-all duration-150">
                         Dapatkan Update
                     </button>
-<a href="https://wa.me/6285769656666" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto btn-secondary h-12 px-6 rounded-lg text-[16px] font-semibold hover:bg-[#E4BEB5]/10 active:scale-95 transition-all duration-150 inline-flex items-center justify-center">
+<a href="https://wa.me/6285769656666" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto btn-secondary h-12 px-6 rounded-lg text-[14px] font-semibold hover:bg-[#E4BEB5]/10 active:scale-95 transition-all duration-150 inline-flex items-center justify-center">
                         Hubungi Kami
                     </a>
 </div>
 <!-- Micro Text -->
-<div class="flex items-center gap-4 micro flex-wrap justify-center md:justify-start text-[12px] font-bold tracking-[0.14em] mt-stack-md">
+<div class="flex items-center gap-4 micro text-[10px] font-bold tracking-[0.18em] mt-stack-md">
 <div class="flex items-center gap-1.5">
 <span class="material-symbols-outlined text-[16px] text-primary">verified</span>
                         COD
@@ -270,15 +265,15 @@
 <div class="absolute bottom-[20%] left-[10%] w-80 h-80 bg-accent-glow/10 rounded-full blur-3xl"></div>
 </div>
 <!-- Focal Logo -->
-<div class="relative z-10 w-full max-w-xl px-6 group">
-<img alt="DUMO Logo" class="w-full h-auto max-h-[420px] object-contain drop-shadow-2xl transition-transform duration-700 group-hover:scale-105" data-alt="A clean and professional photograph of the DUMO brand logo displayed in a minimalist, architectural setting. The logo is large and central, positioned against a background that features soft, ambient lighting with subtle radial gradients of warm orange and cool whites. The overall aesthetic is high-end, corporate, and modern, reflecting a premium automotive startup brand identity with plenty of breathable whitespace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH3ktrxZ4H7wAEIaMHgWEQdkLsNTrIOlqrqOR15jgSON1nS7D5TZpNzRJSAdWLTm9n6hY1fMrZHyVNrfHldRa7j2QBpV_b6gVwhs21DS9eH4atq8PHVIgMhimmnF3jaXZDkp60ZzroyAs_-YsamIomshBeRBX_8Gn4Jc5I0ypgr51byM6xFjrB0s44zddyxZGwznWecybVRUj4kfAJpSn5Han7qRKO06LGGxSyRo0kTejiGod5f6QFtnAXS4Nj_G6ciz1kZjdOxOk"/>
+<div class="relative z-10 w-full max-w-2xl px-12 group">
+<img alt="DUMO Logo" class="w-full h-auto drop-shadow-2xl transition-transform duration-700 group-hover:scale-105" data-alt="A clean and professional photograph of the DUMO brand logo displayed in a minimalist, architectural setting. The logo is large and central, positioned against a background that features soft, ambient lighting with subtle radial gradients of warm orange and cool whites. The overall aesthetic is high-end, corporate, and modern, reflecting a premium automotive startup brand identity with plenty of breathable whitespace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH3ktrxZ4H7wAEIaMHgWEQdkLsNTrIOlqrqOR15jgSON1nS7D5TZpNzRJSAdWLTm9n6hY1fMrZHyVNrfHldRa7j2QBpV_b6gVwhs21DS9eH4atq8PHVIgMhimmnF3jaXZDkp60ZzroyAs_-YsamIomshBeRBX_8Gn4Jc5I0ypgr51byM6xFjrB0s44zddyxZGwznWecybVRUj4kfAJpSn5Han7qRKO06LGGxSyRo0kTejiGod5f6QFtnAXS4Nj_G6ciz1kZjdOxOk"/>
 </div>
 </section>
 <!-- Mobile Background Accent -->
 <div class="md:hidden absolute inset-0 -z-10 bg-glow"></div>
 </main>
 <!-- Footer Shell -->
-<footer class="fixed bottom-0 w-full flex flex-col md:flex-row justify-center md:justify-between items-center gap-1 px-margin-mobile md:px-margin-desktop py-4 bg-transparent z-50 site-footer">
+<footer class="fixed bottom-0 w-full flex flex-col md:flex-row justify-center md:justify-between items-center gap-1 px-margin-mobile md:px-margin-desktop py-4 bg-transparent z-50">
 <div class="flex flex-col items-center md:flex-row md:items-center gap-1">
 <span class="text-primary font-black text-sm md:text-headline-md">DUMO</span>
 <div class="hidden md:block h-4 w-[1px] bg-outline-variant/30 mx-2"></div>
