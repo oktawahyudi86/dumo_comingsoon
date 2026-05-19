@@ -196,32 +196,32 @@
                 transform: none !important;
             }
 
-            /* Ensure main has enough bottom padding to accommodate fixed footer */
-            .main-with-footer { padding-bottom: calc(88px + env(safe-area-inset-bottom)); }
+            /* Ensure main has normal bottom spacing (footer follows document flow) */
+            .main-with-footer { padding-bottom: 24px; }
 
-            /* Keep footer fixed on mobile but compact */
+            /* Keep footer in document flow on mobile so it follows sections */
             footer.site-footer {
-                position: fixed !important;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                padding: calc(8px + env(safe-area-inset-bottom)) 12px !important;
-                background: rgba(249,249,249,0.98);
-                backdrop-filter: blur(4px);
-                box-shadow: 0 -6px 18px rgba(0,0,0,0.06);
+                position: static !important;
+                left: auto;
+                right: auto;
+                bottom: auto;
+                padding: 16px 12px !important;
+                background: transparent;
+                backdrop-filter: none;
+                box-shadow: none;
             }
 
-            /* Reduce footer text size to avoid overlap */
+            /* Reduce footer text size slightly to keep compactness */
             footer.site-footer p, footer.site-footer span { font-size: 12px !important; }
 
-            /* Add spacing above footer for CTAs */
-            .cta-gradient, .btn-secondary { margin-bottom: 8px; }
+            /* Add spacing below CTAs so they don't feel cramped */
+            .cta-gradient, .btn-secondary { margin-bottom: 12px; }
 
             /* Micro items: wrap and center */
             .micro { flex-wrap: wrap; justify-content: center; gap: 8px; }
 
-            /* Reduce logo size on mobile if necessary */
-            .md\:hidden.w-40 { width: 36px; }
+            /* Increase mobile-only logo width so it's clearly visible */
+            .md\:hidden.w-40 { width: 120px !important; }
         }
     </style>
 </head>
