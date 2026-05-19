@@ -131,7 +131,7 @@
         }
     </style>
 </head>
-<body class="bg-surface dark:bg-dark-bg transition-theme text-on-surface dark:text-on-primary-container antialiased selection:bg-primary selection:text-white">
+<body class="min-h-screen flex flex-col bg-surface dark:bg-dark-bg transition-theme text-on-surface dark:text-on-primary-container antialiased selection:bg-primary selection:text-white">
 <!-- TopNavBar Shell -->
 <header class="fixed top-0 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl z-50 flex items-center justify-between px-6 py-2 bg-surface/80 dark:bg-dark-surface/80 backdrop-blur-md rounded-full mt-4 shadow-sm border border-outline-variant/20 dark:border-dark-border/20 transition-theme">
 <div class="flex items-center gap-4">
@@ -155,67 +155,112 @@
 </button>
 </div>
 </header>
-<main class="h-screen w-full flex flex-col md:flex-row overflow-hidden relative">
-<!-- Left Content Section (45%) -->
-<section class="w-full md:w-[45%] h-full flex items-center px-margin-mobile md:px-margin-desktop z-10">
-<div class="max-w-xl mx-auto md:mx-0 flex flex-col gap-stack-md pt-24 md:pt-0">
-<!-- Badge -->
-<div class="inline-flex items-center self-start px-4 py-1.5 rounded-full bg-[#FDE4DD] text-[#E74C2B] font-label-bold text-body-sm shadow-sm">
-<span class="mr-2">🚀</span> Segera Hadir
+<main class="flex-1 w-full flex flex-col md:flex-row overflow-hidden relative pt-28 md:pt-28">
+
+    <!-- MOBILE LAYOUT: Logo center atas, konten teks center bawah -->
+    <div class="md:hidden flex flex-col items-center px-margin-mobile z-10 pb-8">
+        <!-- Logo Section Mobile (Center) -->
+        <div class="w-full flex justify-center pt-6 pb-stack-md">
+            <img alt="DUMO Logo" class="w-48 h-auto drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH3ktrxZ4H7wAEIaMHgWEQdkLsNTrIOlqrqOR15jgSON1nS7D5TZpNzRJSAdWLTm9n6hY1fMrZHyVNrfHldRa7j2QBpV_b6gVwhs21DS9eH4atq8PHVIgMhimmnF3jaXZDkp60ZzroyAs_-YsamIomshBeRBX_8Gn4Jc5I0ypgr51byM6xFjrB0s44zddyxZGwznWecybVRUj4kfAJpSn5Han7qRKO06LGGxSyRo0kTejiGod5f6QFtnAXS4Nj_G6ciz1kZjdOxOk"/>
+        </div>
+        <!-- Badge -->
+        <div class="inline-flex items-center self-center px-4 py-1.5 rounded-full bg-[#FDE4DD] text-[#E74C2B] font-label-bold text-body-sm shadow-sm mb-stack-sm">
+            <span class="mr-2">🚀</span> Segera Hadir
+        </div>
+        <!-- Headline Center -->
+        <h1 class="font-headline-lg text-headline-lg text-on-surface dark:text-white leading-tight text-center mb-stack-sm">
+            Jual Beli Mobil Bekas dengan <span class="text-primary italic">Kualitas Terbaik</span>
+        </h1>
+        <!-- Description Center -->
+        <p class="font-body-md text-body-md text-[#5B403A] dark:text-surface-variant leading-relaxed text-center mb-stack-md">
+            Mau beli atau jual mobil gak pakai ribet di DUMO aja. Gunakan sistem <span class="font-bold text-primary">COD (Cek, OK, Deal)</span>, jadi Anda bisa cek langsung kondisi mobil sebelum deal.
+        </p>
+        <!-- CTA Buttons -->
+        <div class="flex flex-col w-full gap-stack-sm">
+            <button class="w-full cta-gradient text-white px-8 py-4 rounded-xl font-label-bold text-body-md shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all duration-300">
+                Dapatkan Update
+            </button>
+            <button class="w-full border-2 border-[#E74C2B] text-[#E74C2B] px-8 py-4 rounded-xl font-label-bold text-body-md hover:bg-[#E74C2B]/5 active:scale-95 transition-all duration-300">
+                Hubungi Kami
+            </button>
+        </div>
+        <!-- Micro Text Center -->
+        <div class="flex items-center justify-center gap-4 text-[#666666] dark:text-on-surface-variant font-body-sm mt-stack-md">
+            <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+                COD
+            </div>
+            <div class="h-1 w-1 bg-[#666666] rounded-full"></div>
+            <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[18px] text-primary">workspace_premium</span>
+                Kualitas Terbaik
+            </div>
+            <div class="h-1 w-1 bg-[#666666] rounded-full"></div>
+            <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[18px] text-primary">bolt</span>
+                Gak Pakai Ribet
+            </div>
+        </div>
+    </div>
+
+    <!-- DESKTOP LAYOUT: tetap sama (left content, right visual) -->
+    <section class="hidden md:flex w-full md:w-[45%] items-center px-margin-desktop z-10">
+        <div class="max-w-xl mx-0 flex flex-col gap-stack-md">
+            <!-- Badge -->
+            <div class="inline-flex items-center self-start px-4 py-1.5 rounded-full bg-[#FDE4DD] text-[#E74C2B] font-label-bold text-body-sm shadow-sm">
+                <span class="mr-2">🚀</span> Segera Hadir
+            </div>
+            <!-- Headline -->
+            <h1 class="font-headline-lg text-display-lg text-on-surface dark:text-white leading-tight">
+                Jual Beli Mobil Bekas dengan <span class="text-primary">Kualitas Terbaik</span>
+            </h1>
+            <!-- Description -->
+            <p class="font-body-md text-body-lg text-[#5B403A] dark:text-surface-variant leading-relaxed max-w-lg">
+                Mau beli atau jual mobil gak pakai ribet di DUMO aja. Gunakan sistem <span class="font-bold">COD (Cek, OK, Deal)</span>, jadi Anda bisa cek langsung kondisi mobil sebelum deal. Jual dan beli mobil jadi lebih aman, nyaman, dan tanpa worry.
+            </p>
+            <!-- CTA Row -->
+            <div class="flex flex-row items-center gap-stack-sm mt-stack-sm">
+                <button class="cta-gradient text-white px-8 py-4 rounded-xl font-label-bold text-body-md shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all duration-300">
+                    Dapatkan Update
+                </button>
+                <button class="border-2 border-[#E74C2B] text-[#E74C2B] px-8 py-4 rounded-xl font-label-bold text-body-md hover:bg-[#E74C2B]/5 active:scale-95 transition-all duration-300">
+                    Hubungi Kami
+                </button>
+            </div>
+            <!-- Micro Text -->
+            <div class="flex items-center gap-4 text-[#666666] dark:text-on-surface-variant font-body-sm mt-stack-md">
+                <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+                    COD
                 </div>
-<!-- Headline -->
-<h1 class="font-headline-lg text-headline-lg md:text-display-lg text-on-surface dark:text-white leading-tight">
-                    Jual Beli Mobil Bekas dengan <span class="text-primary">Kualitas Terbaik</span>
-</h1>
-<!-- Description -->
-<p class="font-body-md text-body-md md:text-body-lg text-[#5B403A] dark:text-surface-variant leading-relaxed max-w-lg">
-                    Mau beli atau jual mobil gak pakai ribet di DUMO aja. Gunakan sistem <span class="font-bold">COD (Cek, OK, Deal)</span>, jadi Anda bisa cek langsung kondisi mobil sebelum deal. Jual dan beli mobil jadi lebih aman, nyaman, dan tanpa worry.
-                </p>
-<!-- CTA Row -->
-<div class="flex flex-col sm:flex-row items-center gap-stack-sm mt-stack-sm">
-<button class="w-full sm:w-auto cta-gradient text-white px-8 py-4 rounded-xl font-label-bold text-body-md shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all duration-300">
-                        Dapatkan Update
-                    </button>
-<button class="w-full sm:w-auto border-2 border-[#E74C2B] text-[#E74C2B] px-8 py-4 rounded-xl font-label-bold text-body-md hover:bg-[#E74C2B]/5 active:scale-95 transition-all duration-300">
-                        Hubungi Kami
-                    </button>
-</div>
-<!-- Micro Text -->
-<div class="flex items-center gap-4 text-[#666666] dark:text-on-surface-variant font-body-sm mt-stack-md">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
-                        COD
-                    </div>
-<div class="h-1 w-1 bg-[#666666] rounded-full"></div>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px] text-primary">workspace_premium</span>
-                        Kualitas Terbaik
-                    </div>
-<div class="h-1 w-1 bg-[#666666] rounded-full"></div>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px] text-primary">bolt</span>
-                        Gak Pakai Ribet
-                    </div>
-</div>
-</div>
-</section>
-<!-- Right Visual Section (55%) -->
-<section class="hidden md:flex w-full md:w-[55%] h-full items-center justify-center relative bg-glow transition-theme">
-<!-- Animated Background Elements -->
-<div class="absolute inset-0 pointer-events-none overflow-hidden">
-<div class="absolute top-[20%] right-[10%] w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
-<div class="absolute bottom-[20%] left-[10%] w-80 h-80 bg-accent-glow/10 rounded-full blur-3xl"></div>
-</div>
-<!-- Focal Logo -->
-<div class="relative z-10 w-full max-w-2xl px-12 group">
-<img alt="DUMO Logo" class="w-full h-auto drop-shadow-2xl transition-transform duration-700 group-hover:scale-105" data-alt="A clean and professional photograph of the DUMO brand logo displayed in a minimalist, architectural setting. The logo is large and central, positioned against a background that features soft, ambient lighting with subtle radial gradients of warm orange and cool whites. The overall aesthetic is high-end, corporate, and modern, reflecting a premium automotive startup brand identity with plenty of breathable whitespace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH3ktrxZ4H7wAEIaMHgWEQdkLsNTrIOlqrqOR15jgSON1nS7D5TZpNzRJSAdWLTm9n6hY1fMrZHyVNrfHldRa7j2QBpV_b6gVwhs21DS9eH4atq8PHVIgMhimmnF3jaXZDkp60ZzroyAs_-YsamIomshBeRBX_8Gn4Jc5I0ypgr51byM6xFjrB0s44zddyxZGwznWecybVRUj4kfAJpSn5Han7qRKO06LGGxSyRo0kTejiGod5f6QFtnAXS4Nj_G6ciz1kZjdOxOk"/>
-</div>
-</section>
-<!-- Mobile Background Accent -->
-<div class="md:hidden absolute inset-0 -z-10 bg-glow"></div>
+                <div class="h-1 w-1 bg-[#666666] rounded-full"></div>
+                <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px] text-primary">workspace_premium</span>
+                    Kualitas Terbaik
+                </div>
+                <div class="h-1 w-1 bg-[#666666] rounded-full"></div>
+                <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px] text-primary">bolt</span>
+                    Gak Pakai Ribet
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Right Visual Section Desktop (55%) -->
+    <section class="hidden md:flex w-full md:w-[55%] items-center justify-center relative bg-glow transition-theme">
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <div class="absolute top-[20%] right-[10%] w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-[20%] left-[10%] w-80 h-80 bg-accent-glow/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="relative z-10 w-full max-w-2xl px-12 group">
+            <img alt="DUMO Logo" class="w-full h-auto drop-shadow-2xl transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH3ktrxZ4H7wAEIaMHgWEQdkLsNTrIOlqrqOR15jgSON1nS7D5TZpNzRJSAdWLTm9n6hY1fMrZHyVNrfHldRa7j2QBpV_b6gVwhs21DS9eH4atq8PHVIgMhimmnF3jaXZDkp60ZzroyAs_-YsamIomshBeRBX_8Gn4Jc5I0ypgr51byM6xFjrB0s44zddyxZGwznWecybVRUj4kfAJpSn5Han7qRKO06LGGxSyRo0kTejiGod5f6QFtnAXS4Nj_G6ciz1kZjdOxOk"/>
+        </div>
+    </section>
+    <!-- Mobile Background Accent -->
+    <div class="md:hidden absolute inset-0 -z-10 bg-glow"></div>
 </main>
 <!-- Footer Shell -->
-<footer class="fixed bottom-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 bg-transparent z-50">
+<footer class="w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 bg-transparent">
 <div class="flex items-center gap-2">
 <span class="text-primary font-black text-headline-md font-headline-md">DUMO</span>
 <div class="h-4 w-[1px] bg-outline-variant/30 mx-2"></div>
